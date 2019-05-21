@@ -1,8 +1,8 @@
 --Creating Random Number Plates (3 Letters , 3 numbers)
 
 SELECT
-		 CHAR(CAST(rand()*25.01 AS INT )+65) + CHAR(CAST(rand()*25.01 AS INT )+65) +
-		 CHAR(CAST(rand()*25.01 AS INT )+65) + 
+		 CHAR(CAST(rand()*26 AS INT )+65) + CHAR(CAST(rand()*26 AS INT )+65) +
+		 CHAR(CAST(rand()*26 AS INT )+65) + 
 		 CAST (CAST (RAND()*10 AS INT)AS CHAR(1)) + CAST (CAST (RAND()*10 AS INT)AS CHAR(1)) +
 	     CAST (CAST (RAND()*10 AS INT)AS CHAR(1)) 
 		 AS [Number Plate]
@@ -27,11 +27,11 @@ SELECT  CHAR(65) ,CHAR(90)  --CHAR(65) to CHAR(90) Returns a characher from A to
 
 SELECT RAND()  --RAND GENERATES FROM 0.000.... TO 0.99999
 
-SELECT RAND()*25.01 + 65  -- This will return from 65.00000 to 90.0099  
+SELECT RAND()*26 + 65  -- This will return from 65.00000 to 90.9999999 
 
-SELECT CHAR(RAND()*25.01 + 65)  -- This will return from A to Z
+SELECT CHAR(RAND()*26 + 65)  -- This will return from A to Z
 
-SELECT CHAR(CAST(RAND()*25.01 AS int) + 65)  -- Convert sum to an INTEGER for less calculations
+SELECT CHAR(CAST(RAND()*26 AS int) + 65)  -- Convert sum to an INTEGER for less calculations
 
 
 
@@ -43,7 +43,7 @@ DECLARE @Letter CHAR(1) = ''
 
 WHILE  @Letter <> 'Z'           --CHANGE LETTER 
 BEGIN
-	   SET @Letter = CHAR(CAST(RAND()*25.01 AS INT) + 65)
+	   SET @Letter = CHAR(CAST(RAND()*26 AS INT) + 65)
 END
 
 SELECT @Letter
@@ -72,15 +72,15 @@ SELECT @NUMBER
 
 ----- Having the following creating random letter and number we just need to make a select statement
 
-SELECT CHAR(CAST(RAND()*25.01 AS INT) + 65)  
+SELECT CHAR(CAST(RAND()*26 AS INT) + 65)  
 SELECT CAST(RAND()*10 AS INT)
 
 
 ---
 
 SELECT
-		 CHAR(CAST(RAND()*25.01 AS INT )+65) + CHAR(CAST(RAND()*25.01 AS INT )+65) +
-		 CHAR(CAST(RAND()*25.01 AS INT )+65) + 
+		 CHAR(CAST(RAND()*26 AS INT )+65) + CHAR(CAST(RAND()*26 AS INT )+65) +
+		 CHAR(CAST(RAND()*26 AS INT )+65) + 
 		 CAST (CAST (RAND()*10 AS INT)AS CHAR(1)) + CAST (CAST (RAND()*10 AS INT)AS CHAR(1)) +
 	     CAST (CAST (RAND()*10 AS INT)AS CHAR(1)) 
 		 AS [Number Plate]
