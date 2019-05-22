@@ -87,8 +87,9 @@ SELECT * FROM Employee
  FOR SYSTEM_TIME  CONTAINED IN ('2019-05-22 10:50:43.91 ', '2019-05-22 10:57:32.46')
   
   SELECT * FROM Employee                                                    --  Contained in <VALUE FROM> and <VALUE TO>
- FOR SYSTEM_TIME  CONTAINED IN ('2019-05-22 10:57:32.46' , '2019-05-23')     --Returns a table with the values for all row versions that were                                                                               --opened and closed within the specified time range 
-																			--Rows that became active exactly on the lower boundary or ceased!!											--being active exactly on the upper boundary are included.!!
+ FOR SYSTEM_TIME  CONTAINED IN ('2019-05-22 10:57:32.46' , '2019-05-23')     --Returns a table with the values for all row versions that were 
+			                                                    -- opened and closed within the specified time range 
+																														
 
 
 
