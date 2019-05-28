@@ -1,5 +1,14 @@
 --CONSTRAINT CHECK EXAMPLE
 
+--Can enter Letters only
+
+CREATE TABLE #TABLE
+(  ID INT IDENTITY(1,1),
+   LetterOnly varchar(10),
+  CHECK (LetterOnly NOT LIKE '%[^A-Z]%')
+)
+
+
 --Accepts only inserts with 3letters and 3numbers
 
 create table #test
